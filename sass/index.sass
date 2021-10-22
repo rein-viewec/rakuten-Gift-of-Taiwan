@@ -1,0 +1,282 @@
+@import '_mixins/_mixins'
+
+$mainColor: #cd0000
+
+.items__block
+    width: 100%
+    max-width: 1920px
+    .item__tab 
+        width: 100%
+        max-width: 938px
+        max-height: 200px
+        height: 100%
+    .item__tab__ele
+        text-align: center
+        font-size: 16px
+        font-weight: bold
+        padding: 10px 16px
+        width: auto
+        cursor: pointer
+        color: #888888
+        +hov
+        border-bottom: 3px solid transparent
+        &.active
+            color: #222222
+            border-bottom: 3px solid #222222
+    .item__box
+        margin: 10px 0
+        +a
+        .item
+            box-sizing: border-box
+            width: 25%
+            max-width: 100%
+            padding: 10px 6px
+            +hov
+        .item__image
+            width: 100%
+            height: 220px
+            // height: 20vw
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+            &.cate_event
+            &.cate_marry
+            &.cate_culture
+            &.cate_business
+            &.cate_festival
+        .item__name
+            +b
+            +break(2)
+            padding: 10px 0 4px
+            overflow: hidden
+        .item__divider
+            +b
+            border: 1px solid #666666
+        .item__price
+            +b
+            width: 100%
+            padding: 7px 0
+            font-size: 1.5em
+        .item__control
+            +b
+            padding: 20px 20px
+            position: relative
+            .swiper-pagination
+                max-width: calc(100% - 120px)
+                left: 0
+                right: 0
+                position: absolute
+                overflow: hidden
+                z-index: 1
+                margin:  auto
+                .swiper-pagination-bullet
+                    width: 10px
+                    height: 10px
+                .swiper-pagination-bullet-active
+                    background-color: #666666
+            .swiper-button-next,
+            .swiper-button-prev
+                +hov
+                z-index: 2
+                font-weight: bold
+                color: #888888
+                stroke: 2px solid #888888
+                -webkit-text-stroke-width: 1px
+                &::after
+                    font-size: 20px
+        .item__more
+            +flex
+            padding: 20px 0
+            .more__link
+                border-radius: 100px
+                border: 2px solid #888888
+                +trs
+                &:hover
+                    border-color: $mainColor
+                    color: $mainColor
+
+.focus__block
+    +flex
+    +a
+    justify-content: flex-start
+    padding: 100px 0 40px 0
+    width: 100%
+    max-width: 938px
+    position: relative
+    .focus__title__decoration
+        top: 25px
+        left: -10px
+        position: absolute
+        z-index: 2
+        font-size: 3em
+        color: $mainColor
+        width: 10px
+        line-height: 1.3em
+    .focus__images
+        +hov
+        +flex
+        flex-wrap: nowrap
+    .focus__image__box
+        &.main
+            width: 100%
+            max-width: 70.5%
+            margin: 0 12px 0 0 
+        a
+            height: 100%
+            +b
+        img
+            width: 100%
+            object-fit: cover
+        &.second
+            width: 100%
+            max-width: 29.5%
+            .img__box
+                width: 100%
+                &:first-child
+                    padding-bottom: 14px
+    .focus__info
+        +flex
+        +hov
+        color: #555555
+        align-items: center
+        margin: 20px 0
+        max-width: 450px
+    .focus__title
+        +break(2)
+        overflow: hidden
+        width: calc(100% - 30%)
+        border-right: 2px solid #888888
+        padding:  0 10px 0 0
+        font-size: 1.1em
+    .focus__price
+        padding:  0 0 0 15px
+        width: 30%
+        font-width: bold
+        font-size: 1.5em
+        font-weight: bold
+    .focus__more
+        +flex
+        justify-content: start
+        width: 100%
+        padding: 20px 0
+        .more__link
+            border-radius: 100px
+            border: 2px solid #888888
+            +trs
+            &:hover
+                border-color: $mainColor
+                color: $mainColor
+
+.about__block
+    padding: 150px 0
+    color: #ffffff
+    +flex
+    justify-content: space-evenly
+    align-items: center
+    .about__logo
+        max-width: 220px
+        font-size: 1.75em
+    .about__content
+        margin: 60px 0 0 0
+        width: 100%
+        max-width: calc(100% - 600px)
+        font-size: 1.3em
+
+.footer__block
+    +flex
+    width: 100%
+    .footer__title
+        padding: 84px 0 0
+        height: 150px
+        background-image: url('../images/bg-shopping_guide.png')
+        background-repeat: no-repeat
+        background-size: 50%
+        background-position: center
+        font-size: 2em
+    .footer__statement
+        +flex
+        padding-top: 25px
+        width: 100%
+    .footer__statement__box
+        width: 100%
+        max-width: 32%
+        padding: 0 10px
+    .footer__statement__title
+        height: 47px
+        text-align: center
+        font-weight: bold
+        font-size: 2em
+        padding: 4px 0
+    .footer__statement__content
+        padding: 20px 0px
+        +flex
+        width: 100%
+        ul
+            width: 100%
+        li
+            width: 100%
+            padding: 4px 0
+        .helf
+            width: 49%
+            &:first-child
+                width: 60%
+            &:last-child
+                width: 40%
+    &.links
+        max-width: 938px
+        padding: 60px 0
+        justify-content: start
+        color: #ffffff
+        .footer__statement__title
+            text-align: left
+            width: 100%
+            padding: 30px 0
+        .footer__statement__box
+            +flex
+            height: 250px
+            align-items: end
+            max-width: 50%
+            text-align: left
+        .footer__statement__content
+            width: 100%
+            padding: 25px 0px
+            justify-content: start
+            a
+                +ib(unset)
+                width: auto
+                margin: 5px 0
+                padding: 0 20px
+                border-right: 1px solid #ffffff
+                +trs
+                &:nth-child(4)
+                    border-right: 1px solid #ffffff00
+                &:hover
+                    color: #ffffffaa
+                    border-right: 1px solid #ffffffff
+                    &:nth-child(4)
+                        border-right: 1px solid #ffffff00
+                &:last-child
+                    border: transparent
+        +a
+        b
+            padding:  0 8px 0 0
+
+@media all and (max-width: 1200px)
+    .items__block
+        .item
+            padding: 5px 3px !important
+        .item__image
+            height: unset !important
+
+    .about__block
+        .about__logo
+            text-align: center
+            max-width: 100%
+        .about__content
+            max-width: 100%
+
+    .footer__block
+        .footer__statement__box
+            max-width: 100%
+            padding: 10px 0
