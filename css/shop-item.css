@@ -1,0 +1,298 @@
+.comment__block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+  border: 2px solid #444444;
+  position: relative;
+  padding: 35px 25px 15px 25px;
+}
+
+.comment__block .comment__title {
+  position: absolute;
+  top: -15px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8em;
+  background-color: #ffffff;
+  padding: 0 14px;
+}
+
+.comment__block .comment__title::after {
+  content: '';
+  background-image: url("https://www.rakuten.ne.jp/gold/giftoftw/images/rank/deco.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 80px;
+  height: 50px;
+  position: absolute;
+  right: 0px;
+  top: -45px;
+}
+
+.comment__block .comment__ranking {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment__block .comment__ranking__rate {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.comment__block .comment__ranking__rate img {
+  padding: 4px;
+  max-width: 40px;
+}
+
+.comment__block .comment__ranking__rate span {
+  max-width: auto;
+  font-weight: bold;
+  margin: 0 5px 0 0;
+  font-size: 1em;
+}
+
+.comment__block .comment__ranking__content {
+  padding: 6px 0;
+}
+
+.comment__block .comment__ranking__content a {
+  color: unset;
+  text-decoration: unset;
+}
+
+.comment__block .comment__ranking__content a {
+  width: 100%;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 100ms all ease-in-out;
+  -o-transition: 100ms all ease-in-out;
+  transition: 100ms all ease-in-out;
+  width: 100%;
+  color: #BA0100;
+  font-weight: bold;
+  padding: 0 0 12px 0;
+}
+
+.comment__block .comment__ranking__content a:hover {
+  opacity: 0.85;
+}
+
+.comment__block .comment__ranking__content a:hover {
+  color: #444444;
+}
+
+.comment__block .comment__ranking__content span {
+  width: 100%;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.comment__block .comment__list {
+  width: 100%;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.comment__block .comment__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+}
+
+.comment__block .comment__item__name {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.comment__block .comment__item__name .name {
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.comment__block .comment__item__name .date {
+  color: #777777;
+}
+
+.comment__block .comment__item__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 10px 0 0 0;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.comment__block .comment__item__rate {
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 110px;
+}
+
+.comment__block .comment__item__comment {
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: calc(100% - 120px);
+  padding: 6px 0 6px 6px;
+  border-bottom: 2px solid #444444;
+}
+
+@media all and (max-width: 640px) {
+  .comment__block {
+    padding-top: 50px;
+  }
+  .comment__block .comment__title {
+    width: 90%;
+    padding: 0 12px;
+    font-size: 1.7em;
+  }
+  .comment__block .comment__ranking__rate img {
+    max-width: 35px;
+  }
+  .comment__block .comment__ranking__rate span:first-child {
+    width: 100%;
+  }
+  .comment__block .comment__ranking__content {
+    width: 100%;
+  }
+  .comment__block .comment__ranking__content a {
+    padding: 5px 0;
+  }
+  .comment__block .comment__item__name > div {
+    width: 100%;
+  }
+  .comment__block .comment__item__comment {
+    width: 100%;
+    max-width: 100%;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    max-width: 100%;
+  }
+}

@@ -6,6 +6,10 @@
 $mainColor: #BA0100
 
 html
+  overflow-x: hidden
+  body
+    overflow-x: hidden
+  scroll-behavior: smooth
   font-size: .8em
   &::-webkit-scrollbar
       width: 14px
@@ -23,9 +27,6 @@ html
       border-style: solid
       border-width: 0px 0px 0px 0px
 
-img
-  +img
-
 .en
   font-family: "Helvetica Neue LT Pro 75 Bold" , "Helvetica Neue LT Pro" , "Helvetica Neue LT Pro 75" , "Helvetica Neue" , "HelveticaTur" , Helvetica ,Montserrat,BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans",Arial,sans-serif;
 
@@ -39,24 +40,28 @@ img
 .divider
   border-top: 3px solid #555555
   display: block
+  width: 100%
   &.red
     border-color: $mainColor
 
 .area
   width: 100%
   +flex
+  // Global
+  img
+    +img
   &.gray
     background-color: #f3f3f3
   &.red
     background-color: $mainColor
   &.focus
-    background-image: url('../images/bg-focus.jpg')
+    background-image: url('https://www.rakuten.ne.jp/gold/giftoftw/images/bg-focus.jpg')
     background-repeat: repeat
     background-attachment: fixed
     background-position: center
     background-size: 50%
   &.about
-    background-image: url('../images/bg-about_us.jpg')
+    background-image: url('https://www.rakuten.ne.jp/gold/giftoftw/images/bg-about_us.jpg')
     background-repeat: no-repeat
     background-attachment: fixed
     background-position: center
@@ -78,11 +83,15 @@ img
     justify-content: start
   &.banner__block
     padding: 0px
+  &.comment
+    max-width: 1920px
+    padding: 24px 14px
   a
     max-width: 100%
 
 .header
-  position: fixed
+  top: 0
+  position: absolute
   z-index: 10
   .header__logo
     padding: 10px 0 0
@@ -136,7 +145,7 @@ img
         font-weight: bold
 
 .banner__block
-  background-image: url('../images/main_w.jpg')
+  background-image: url('https://www.rakuten.ne.jp/gold/giftoftw/images/main_w.jpg')
   object-fit: cover
   background-size: cover
   background-position: center
@@ -201,57 +210,57 @@ img
 .category__sidebar
   width: 100%
   max-width: 240px
-  .category__box
-    margin-bottom: 1.25rem
-  .category__title
-    background-color: #BA0100
-    font-size: 17px
-    padding: 22px 5px 22px 20px
+.category__box
+  margin-bottom: 1.25rem
+.category__title
+  background-color: #BA0100
+  font-size: 17px
+  padding: 22px 5px 22px 20px
+  width: 100%
+  color: #ffffff
+  i
+    width: 22px
+.category__list
+  margin: .5rem 0
+  > li
+    min-height: 35px
     width: 100%
-    color: #ffffff
-    i
-      width: 22px
-  .category__list
-    margin: .5rem 0
-    > li
-      min-height: 35px
-      width: 100%
-      cursor: pointer
-      color: #000000
-    a
-      padding: 5px 15px
-      display: block
-      width: 100%
-      text-decoration: unset
-      color: #000000
-      +hov(.7)
-      &:hover
-        background-color: #aaaaaa
-        color: #ffffff
-        i
-          color: #ffffff
-      i
-        +hov(.7)
-        color: #777777
-        margin: 0 10px 0 0
-
-  // Expension
-  .category__secondary
-    display: none
-    padding: 10px 0
-  .category__first
+    cursor: pointer
+    color: #000000
+  a
     padding: 5px 15px
+    display: block
+    width: 100%
+    text-decoration: unset
+    color: #000000
+    +hov(.7)
+    &:hover
+      background-color: #aaaaaa
+      color: #ffffff
+      i
+        color: #ffffff
     i
       +hov(.7)
       color: #777777
       margin: 0 10px 0 0
-  .category__expension__title
-    +hov
+
+// Expension
+.category__secondary
+  display: none
+  padding: 10px 0
+.category__first
+  padding: 5px 15px
+  i
+    +hov(.7)
+    color: #777777
+    margin: 0 10px 0 0
+.category__expension__title
+  +hov
+  i
+    +trs
+  &.active
     i
-      +trs
-    &.active
-      i
-        transform: rotate(90deg)
+      transform: rotate(90deg)
 
 .main__content
   width: 100%
@@ -262,8 +271,89 @@ img
     padding: 25px 0 6px 0
     color: $mainColor
 
+.footer__block
+    +flex
+    width: 100%
+    .footer__title
+        padding: 84px 0 0
+        height: 150px
+        background-image: url('https://www.rakuten.ne.jp/gold/giftoftw/images/bg-shopping_guide.png')
+        background-repeat: no-repeat
+        background-size: 50%
+        background-position: center
+        font-size: 2em
+    .footer__statement
+        +flex
+        padding-top: 25px
+        width: 100%
+    .footer__statement__box
+        width: 100%
+        max-width: 32%
+        padding: 0 10px
+    .footer__statement__title
+        height: 47px
+        text-align: center
+        font-weight: bold
+        font-size: 2em
+        padding: 4px 0
+    .footer__statement__content
+        padding: 20px 0px
+        +flex
+        width: 100%
+        ul
+            width: 100%
+        li
+            width: 100%
+            padding: 4px 0
+        .helf
+            width: 49%
+            &:first-child
+                width: 60%
+            &:last-child
+                width: 40%
+    &.links
+        max-width: 938px
+        padding: 60px 0 100px
+        justify-content: start
+        color: #ffffff
+        .footer__statement__title
+            text-align: left
+            width: 100%
+        .footer__statement__box
+            +flex
+            height: 250px
+            align-items: end
+            max-width: 50%
+            padding: 0
+            text-align: left
+        .footer__statement__content
+            width: 100%
+            padding: 25px 0px
+            justify-content: start
+            a
+                +ib(unset)
+                width: auto
+                margin: 5px 0
+                padding: 0 20px
+                border-right: 1px solid #ffffff
+                +trs
+                &:nth-child(4)
+                    border-right: 1px solid #ffffff00
+                &:hover
+                    color: #ffffffaa
+                    border-right: 1px solid #ffffffff
+                    &:nth-child(4)
+                        border-right: 1px solid #ffffff00
+                &:last-child
+                    border: transparent
+        +a
+        b
+            padding:  0 8px 0 0
+
 
 @media all and (max-width: 1200px)
+  .banner__block
+    height: 130vw
   .header
     .header__nav
       li
@@ -277,6 +367,14 @@ img
   .main__content
     max-width: 100%
 
+@media all and (max-width: 720px)
+  .footer__block
+    .footer__statement__box
+        max-width: 100%
+        padding: 10px 0
+    .footer__statement__content  
+        .helf
+            width: 100% !important
 @media all and (max-width: 480px)
   .header
     .header__nav

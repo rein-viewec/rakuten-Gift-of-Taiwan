@@ -1,0 +1,119 @@
+@import '_mixins/_mixins'
+$mainColor: #BA0100
+
+.comment__block
+    +flex
+    width: 100%
+    border: 2px solid #444444
+    position: relative
+    padding: 35px 25px 15px 25px
+    .comment__title
+        position: absolute
+        top: -15px
+        margin: 0 auto
+        text-align: center
+        font-weight: bold
+        font-size: 1.8em
+        background-color: #ffffff
+        padding: 0 14px
+        &::after
+            content: ''
+            background-image: url('https://www.rakuten.ne.jp/gold/giftoftw/images/rank/deco.png')
+            background-size: 100%
+            background-repeat: no-repeat
+            background-position: center
+            +ib
+            max-width: 80px
+            height: 50px
+            position: absolute
+            right: 0px
+            top: -45px
+    .comment__ranking
+        +flex
+        width: 100%
+        justify-content: space-between
+        align-items: center
+    .comment__ranking__rate
+        +flex
+        align-items: center
+        justify-content: start
+        font-weight: bold
+        font-size: 1.5em
+        img
+            padding: 4px
+            max-width: 40px
+        span
+            max-width: auto
+            font-weight: bold
+            margin: 0 5px 0 0
+            font-size: 1em
+    .comment__ranking__content
+        padding: 6px 0
+        +a
+        a
+            +b
+            +hov
+            &:hover
+                color: #444444
+            width: 100%
+            color: $mainColor
+            font-weight: bold
+            padding: 0 0 12px 0
+        span
+            +b
+    .comment__list
+        +b
+        padding: 10px 0
+    .comment__item
+        +flex
+        flex-wrap: wrap
+        width: 100%
+        justify-content: space-between
+        padding: 10px 0
+    .comment__item__name
+        +flex
+        justify-content: space-between
+        width: 100%
+        .name
+            font-weight: bold
+            font-size: 1.15em
+        .date
+            color: #777777
+    .comment__item__content
+        +flex
+        padding: 10px 0 0 0
+        justify-content: space-between
+        width: 100%
+    .comment__item__rate
+        +ib
+        max-width: 110px
+    .comment__item__comment
+        +ib
+        max-width: calc(100% - 120px)
+        padding: 6px 0 6px 6px
+        border-bottom: 2px solid #444444
+
+
+@media all and (max-width: 640px)
+    .comment__block
+        padding-top: 50px
+        .comment__title
+            width: 90%
+            padding: 0 12px
+            font-size: 1.7em
+        .comment__ranking__rate
+            img
+                max-width: 35px
+            span
+                &:first-child
+                    width: 100%
+        .comment__ranking__content
+            width: 100%
+            a
+                padding: 5px 0
+        .comment__item__name
+            > div
+                width: 100%
+        .comment__item__comment
+            +ib
+            max-width: 100%

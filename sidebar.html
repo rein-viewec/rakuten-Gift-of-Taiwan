@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9188edaa95.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="category__box">
+      <h3 class="category__title text-left">
+        <i class="fas fa-gift"></i>
+        <span>Gift Category</span>
+      </h3>
+      <ul class="category__list">
+        <li>
+          <a href="#">
+            イベント
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            行事
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            婚姻
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            カルチャー
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            ビジネス
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="category__box">
+      <h3 class="category__title text-left">
+        <i class="fas fa-boxes"></i>
+        <span>Product Category</span>
+      </h3>
+      <ul class="category__list">
+        <li>
+          <a href="#">
+            イベント
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            行事
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="category__box">
+      <h3 class="category__title text-left">
+        <i class="fas fa-yen-sign"></i>
+        <span>Price Range</span>
+      </h3>
+      <ul class="category__list">
+        <li class="category__first">
+          <div class="category__expension__title">
+            <i class="fas fa-angle-right"></i>
+            イベント(Custom)
+          </div>
+          <ul class="category__list category__secondary">
+            <li>
+              <a href="#">
+                Second category
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Second category
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Second category
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="category__first">
+          <div class="category__expension__title">
+            <i class="fas fa-angle-right"></i>
+            イベント(Custom)
+          </div>
+          <ul class="category__list category__secondary">
+            <li>
+              <a href="#">
+                Second category
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Second category
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Second category
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- <script src="js/main.js"> -->
+    <script>
+      $('.category__expension__title').on('click', function () {
+        $(this)
+          .toggleClass('active')
+          .next('.category__secondary')
+          .slideToggle('fast')
+      })
+    </script>
+  </body>
+</html>
